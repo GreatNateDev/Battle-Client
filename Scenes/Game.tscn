@@ -1,0 +1,239 @@
+[gd_scene load_steps=4 format=3 uid="uid://danb2d4gr6n5i"]
+
+[ext_resource type="Script" uid="uid://deve37d1xwe76" path="res://Scripts/game.gd" id="1_gl6un"]
+[ext_resource type="Texture2D" uid="uid://wvfittnxdfhj" path="res://Images/icon.svg" id="2_j5yw3"]
+[ext_resource type="Theme" uid="uid://cqyysnug8sqms" path="res://Themes/Money.tres" id="3_j5yw3"]
+
+[node name="Game" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gl6un")
+metadata/_edit_lock_ = true
+
+[node name="Party" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+
+[node name="Party-List" type="GridContainer" parent="Party"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -392.0
+offset_bottom = 260.0
+grow_horizontal = 0
+columns = 3
+
+[node name="Party-1" type="TextureButton" parent="Party/Party-List"]
+layout_mode = 2
+texture_normal = ExtResource("2_j5yw3")
+
+[node name="Party-2" type="TextureButton" parent="Party/Party-List"]
+layout_mode = 2
+texture_normal = ExtResource("2_j5yw3")
+
+[node name="Party-3" type="TextureButton" parent="Party/Party-List"]
+layout_mode = 2
+texture_normal = ExtResource("2_j5yw3")
+
+[node name="Party-4" type="TextureButton" parent="Party/Party-List"]
+layout_mode = 2
+texture_normal = ExtResource("2_j5yw3")
+
+[node name="Party-5" type="TextureButton" parent="Party/Party-List"]
+layout_mode = 2
+texture_normal = ExtResource("2_j5yw3")
+
+[node name="Party-6" type="TextureButton" parent="Party/Party-List"]
+layout_mode = 2
+texture_normal = ExtResource("2_j5yw3")
+
+[node name="Party-text" type="Label" parent="Party"]
+layout_mode = 0
+offset_left = -200.0
+offset_top = 264.0
+offset_right = -123.0
+offset_bottom = 306.0
+theme_override_font_sizes/font_size = 30
+text = "Party"
+
+[node name="LeftMenu" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LeftMenuContainer" type="VBoxContainer" parent="LeftMenu"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Pc" type="Button" parent="LeftMenu/LeftMenuContainer"]
+layout_mode = 2
+text = "Personal Computer"
+
+[node name="Settings" type="Button" parent="LeftMenu/LeftMenuContainer"]
+layout_mode = 2
+text = "Game Settings"
+
+[node name="Logout" type="Button" parent="LeftMenu/LeftMenuContainer"]
+layout_mode = 2
+text = "Logout"
+
+[node name="Server" type="Button" parent="LeftMenu/LeftMenuContainer"]
+layout_mode = 2
+text = "Leave Server"
+
+[node name="Quit" type="Button" parent="LeftMenu/LeftMenuContainer"]
+layout_mode = 2
+text = "Exit Game"
+
+[node name="Fullscreen" type="CheckButton" parent="LeftMenu/LeftMenuContainer"]
+layout_mode = 2
+text = "Fullscreen"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.790123
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+horizontal_scroll_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_j5yw3")
+
+[node name="TextureButton2" type="TextureButton" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_j5yw3")
+
+[node name="TextureButton3" type="TextureButton" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_j5yw3")
+
+[node name="TextureButton4" type="TextureButton" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_j5yw3")
+
+[node name="TextureButton5" type="TextureButton" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_j5yw3")
+
+[node name="TextureButton6" type="TextureButton" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_j5yw3")
+
+[node name="TextureButton7" type="TextureButton" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_j5yw3")
+
+[node name="TextureButton8" type="TextureButton" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_j5yw3")
+
+[node name="TextureButton9" type="TextureButton" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_j5yw3")
+
+[node name="TextureButton10" type="TextureButton" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_j5yw3")
+
+[node name="TextureButton11" type="TextureButton" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_j5yw3")
+
+[node name="TextureButton12" type="TextureButton" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_j5yw3")
+
+[node name="TextureButton13" type="TextureButton" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_j5yw3")
+
+[node name="TextureButton14" type="TextureButton" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_j5yw3")
+
+[node name="TextureButton15" type="TextureButton" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_j5yw3")
+
+[node name="TextureButton16" type="TextureButton" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_j5yw3")
+
+[node name="TextureButton17" type="TextureButton" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_j5yw3")
+
+[node name="TextureButton18" type="TextureButton" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_j5yw3")
+
+[node name="TextureButton19" type="TextureButton" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_j5yw3")
+
+[node name="TextureButton20" type="TextureButton" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_j5yw3")
+
+[node name="TextureButton21" type="TextureButton" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_j5yw3")
+
+[node name="TextureButton22" type="TextureButton" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_j5yw3")
+
+[node name="TextureButton23" type="TextureButton" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_j5yw3")
+
+[node name="TextureButton24" type="TextureButton" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_j5yw3")
+
+[node name="TextureButton25" type="TextureButton" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_j5yw3")
+
+[node name="Top" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+
+[node name="Money" type="Label" parent="Top"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme = ExtResource("3_j5yw3")
+text = "0$"
+
+[connection signal="pressed" from="LeftMenu/LeftMenuContainer/Pc" to="." method="PC"]
+[connection signal="pressed" from="LeftMenu/LeftMenuContainer/Settings" to="." method="Settings"]
+[connection signal="pressed" from="LeftMenu/LeftMenuContainer/Logout" to="." method="Logout"]
+[connection signal="pressed" from="LeftMenu/LeftMenuContainer/Server" to="." method="Leave_Server"]
+[connection signal="pressed" from="LeftMenu/LeftMenuContainer/Quit" to="." method="Quit"]
+[connection signal="toggled" from="LeftMenu/LeftMenuContainer/Fullscreen" to="." method="Fullscreen_toggled"]

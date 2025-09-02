@@ -11,16 +11,17 @@ config_version=5
 [application]
 
 config/name="Poke_Frontend"
-run/main_scene="res://Server.tscn"
+run/main_scene="res://Scenes/Server.tscn"
 config/features=PackedStringArray("4.4", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://Images/icon.svg"
 
 [autoload]
 
-Globals="*res://globals.gd"
+Globals="*res://Scripts/globals.gd"
 
 [display]
 
+window/size/mode=2
 window/subwindows/embed_subwindows=false
 
 [rendering]
