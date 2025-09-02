@@ -1,0 +1,105 @@
+[gd_scene load_steps=6 format=3 uid="uid://csu3q82lseiwk"]
+
+[ext_resource type="Script" uid="uid://cervattaoeuor" path="res://battle.gd" id="1_pjn1s"]
+[ext_resource type="Texture2D" uid="uid://d38rn82brg2f7" path="res://bk.png" id="2_yflgj"]
+[ext_resource type="Texture2D" uid="uid://bnnxp2f1tjlil" path="res://platform.png" id="3_lrdw4"]
+[ext_resource type="Theme" uid="uid://b1f00rj46dafy" path="res://hpbar.tres" id="4_3hmwm"]
+[ext_resource type="Theme" uid="uid://b4uewk12urgna" path="res://expbar.tres" id="5_83ubk"]
+
+[node name="Battle" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pjn1s")
+
+[node name="Bk_holder" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="bk" type="Sprite2D" parent="Bk_holder"]
+texture_filter = 1
+scale = Vector2(5, 5)
+texture = ExtResource("2_yflgj")
+
+[node name="HBoxContainer" type="BoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -576.0
+offset_top = -40.0
+offset_right = 576.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="Fight" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Fight"
+
+[node name="Pokemon" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Pokemon"
+
+[node name="Bag" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Bag"
+
+[node name="Run" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Run"
+
+[node name="Platform_holder" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -128.0
+offset_right = 20.0
+offset_bottom = -88.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Platform" type="Sprite2D" parent="Platform_holder"]
+texture_filter = 1
+position = Vector2(0, -32)
+scale = Vector2(3, 3)
+texture = ExtResource("3_lrdw4")
+
+[node name="Hp" type="ProgressBar" parent="Platform_holder"]
+layout_mode = 0
+offset_left = -159.0
+offset_top = 48.0
+offset_right = 156.0
+offset_bottom = 75.0
+theme = ExtResource("4_3hmwm")
+
+[node name="Exp" type="ProgressBar" parent="Platform_holder"]
+layout_mode = 0
+offset_left = -160.0
+offset_top = 16.0
+offset_right = 155.0
+offset_bottom = 43.0
+theme = ExtResource("5_83ubk")
