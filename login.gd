@@ -22,7 +22,7 @@ func send_complete(_result, code, _headers, body):
 		Globals.COOKIE = decoded_cookie
 		get_tree().change_scene_to_file("res://Game.tscn")
 	else:
-		print("Login Failed Status: "+code)
+		print("Login Failed Status: "+str(code))
 
 
 func Send_2() -> void:
