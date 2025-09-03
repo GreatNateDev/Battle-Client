@@ -5,7 +5,7 @@ func _ready() -> void:
 	Globals.loadsave()
 	var t = Timer.new()
 	add_child(t)
-	t.wait_time = 3
+	t.wait_time = 1
 	t.one_shot = false
 	t.start()
 	t.timeout.connect(gui_refresh)
@@ -53,4 +53,4 @@ func gui_refresh():
 		%LeftMenu.visible = true
 		%Loading.visible = false
 		load_needed = false
-	$Top/Money.text = "Money $" + str(Globals.data.money)
+	$Top/Money.text = "Money $" + str(int(Globals.data.money))

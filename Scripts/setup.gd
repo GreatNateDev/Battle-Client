@@ -1,5 +1,6 @@
 extends Node
 
 func init():
-	Globals.data.money = 0 
+	print("init pinged")
+	Globals.data["money"] = 0 
 	
