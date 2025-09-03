@@ -22,6 +22,7 @@ func send_cookie():
 func loadsave():
 	if data != {}:
 		save()
+	Setup.init()
 	var req = HTTPRequest.new()
 	add_child(req)
 	req.request(Globals.SERVER+"savedata?name="+Globals.USERNAME+"&type=download&cookie="+Globals.COOKIE+"&data=req")

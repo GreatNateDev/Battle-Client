@@ -1,8 +1,15 @@
 extends Control
-
+var load_needed = true
 
 func _ready() -> void:
 	Globals.loadsave()
+	var t = Timer.new()
+	add_child(t)
+	t.wait_time = 3
+	t.one_shot = false
+	t.start()
+	t.timeout.connect(gui_refresh)
+	
 
 func Fullscreen_toggled(toggled_on: bool) -> void:
 	if toggled_on == true:
@@ -37,3 +44,13 @@ func Settings() -> void:
 
 func PC() -> void:
 	get_tree().change_scene_to_file("res://Scenes/PC.tscn")
+func gui_refresh():
+	print("hit")
+	if load_needed == true:
+		%Party.visible = true
+		%Selecter.visible = true
+		%Top.visible = true
+		%LeftMenu.visible = true
+		%Loading.visible = false
+		load_needed = false
+	$Top/Money.text = "Money $" + str(Globals.data.money)

@@ -17,6 +17,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="LeftMenuContainer" type="VBoxContainer" parent="top left"]
+layout_mode = 0
 offset_right = 189.0
 offset_bottom = 131.0
 

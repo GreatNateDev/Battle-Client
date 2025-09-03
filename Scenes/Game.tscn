@@ -14,7 +14,40 @@ grow_vertical = 2
 script = ExtResource("1_gl6un")
 metadata/_edit_lock_ = true
 
+[node name="Middle" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Loading" type="Label" parent="Middle"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -218.0
+offset_top = -27.5
+offset_right = 218.0
+offset_bottom = 27.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "Connecting to Server..."
+
 [node name="Party" type="Control" parent="."]
+unique_name_in_owner = true
+visible = false
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -67,14 +100,18 @@ theme_override_font_sizes/font_size = 30
 text = "Party"
 
 [node name="LeftMenu" type="Control" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="LeftMenuContainer" type="VBoxContainer" parent="LeftMenu"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 182.0
+offset_bottom = 246.0
+scale = Vector2(1.3, 1.3)
 
 [node name="Pc" type="Button" parent="LeftMenu/LeftMenuContainer"]
 layout_mode = 2
@@ -100,7 +137,9 @@ text = "Exit Game"
 layout_mode = 2
 text = "Fullscreen"
 
-[node name="ScrollContainer" type="ScrollContainer" parent="."]
+[node name="Selecter" type="ScrollContainer" parent="."]
+unique_name_in_owner = true
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.790123
@@ -111,125 +150,139 @@ grow_vertical = 0
 horizontal_scroll_mode = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Selecter"]
 layout_mode = 2
 
-[node name="TextureButton" type="TextureButton" parent="ScrollContainer/HBoxContainer"]
-layout_mode = 2
-texture_normal = ExtResource("2_j5yw3")
-
-[node name="TextureButton2" type="TextureButton" parent="ScrollContainer/HBoxContainer"]
+[node name="TextureButton" type="TextureButton" parent="Selecter/HBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("2_j5yw3")
 
-[node name="TextureButton3" type="TextureButton" parent="ScrollContainer/HBoxContainer"]
+[node name="TextureButton2" type="TextureButton" parent="Selecter/HBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("2_j5yw3")
 
-[node name="TextureButton4" type="TextureButton" parent="ScrollContainer/HBoxContainer"]
+[node name="TextureButton3" type="TextureButton" parent="Selecter/HBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("2_j5yw3")
 
-[node name="TextureButton5" type="TextureButton" parent="ScrollContainer/HBoxContainer"]
+[node name="TextureButton4" type="TextureButton" parent="Selecter/HBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("2_j5yw3")
 
-[node name="TextureButton6" type="TextureButton" parent="ScrollContainer/HBoxContainer"]
+[node name="TextureButton5" type="TextureButton" parent="Selecter/HBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("2_j5yw3")
 
-[node name="TextureButton7" type="TextureButton" parent="ScrollContainer/HBoxContainer"]
+[node name="TextureButton6" type="TextureButton" parent="Selecter/HBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("2_j5yw3")
 
-[node name="TextureButton8" type="TextureButton" parent="ScrollContainer/HBoxContainer"]
+[node name="TextureButton7" type="TextureButton" parent="Selecter/HBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("2_j5yw3")
 
-[node name="TextureButton9" type="TextureButton" parent="ScrollContainer/HBoxContainer"]
+[node name="TextureButton8" type="TextureButton" parent="Selecter/HBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("2_j5yw3")
 
-[node name="TextureButton10" type="TextureButton" parent="ScrollContainer/HBoxContainer"]
+[node name="TextureButton9" type="TextureButton" parent="Selecter/HBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("2_j5yw3")
 
-[node name="TextureButton11" type="TextureButton" parent="ScrollContainer/HBoxContainer"]
+[node name="TextureButton10" type="TextureButton" parent="Selecter/HBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("2_j5yw3")
 
-[node name="TextureButton12" type="TextureButton" parent="ScrollContainer/HBoxContainer"]
+[node name="TextureButton11" type="TextureButton" parent="Selecter/HBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("2_j5yw3")
 
-[node name="TextureButton13" type="TextureButton" parent="ScrollContainer/HBoxContainer"]
+[node name="TextureButton12" type="TextureButton" parent="Selecter/HBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("2_j5yw3")
 
-[node name="TextureButton14" type="TextureButton" parent="ScrollContainer/HBoxContainer"]
+[node name="TextureButton13" type="TextureButton" parent="Selecter/HBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("2_j5yw3")
 
-[node name="TextureButton15" type="TextureButton" parent="ScrollContainer/HBoxContainer"]
+[node name="TextureButton14" type="TextureButton" parent="Selecter/HBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("2_j5yw3")
 
-[node name="TextureButton16" type="TextureButton" parent="ScrollContainer/HBoxContainer"]
+[node name="TextureButton15" type="TextureButton" parent="Selecter/HBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("2_j5yw3")
 
-[node name="TextureButton17" type="TextureButton" parent="ScrollContainer/HBoxContainer"]
+[node name="TextureButton16" type="TextureButton" parent="Selecter/HBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("2_j5yw3")
 
-[node name="TextureButton18" type="TextureButton" parent="ScrollContainer/HBoxContainer"]
+[node name="TextureButton17" type="TextureButton" parent="Selecter/HBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("2_j5yw3")
 
-[node name="TextureButton19" type="TextureButton" parent="ScrollContainer/HBoxContainer"]
+[node name="TextureButton18" type="TextureButton" parent="Selecter/HBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("2_j5yw3")
 
-[node name="TextureButton20" type="TextureButton" parent="ScrollContainer/HBoxContainer"]
+[node name="TextureButton19" type="TextureButton" parent="Selecter/HBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("2_j5yw3")
 
-[node name="TextureButton21" type="TextureButton" parent="ScrollContainer/HBoxContainer"]
+[node name="TextureButton20" type="TextureButton" parent="Selecter/HBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("2_j5yw3")
 
-[node name="TextureButton22" type="TextureButton" parent="ScrollContainer/HBoxContainer"]
+[node name="TextureButton21" type="TextureButton" parent="Selecter/HBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("2_j5yw3")
 
-[node name="TextureButton23" type="TextureButton" parent="ScrollContainer/HBoxContainer"]
+[node name="TextureButton22" type="TextureButton" parent="Selecter/HBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("2_j5yw3")
 
-[node name="TextureButton24" type="TextureButton" parent="ScrollContainer/HBoxContainer"]
+[node name="TextureButton23" type="TextureButton" parent="Selecter/HBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("2_j5yw3")
 
-[node name="TextureButton25" type="TextureButton" parent="ScrollContainer/HBoxContainer"]
+[node name="TextureButton24" type="TextureButton" parent="Selecter/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_j5yw3")
+
+[node name="TextureButton25" type="TextureButton" parent="Selecter/HBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("2_j5yw3")
 
 [node name="Top" type="Control" parent="."]
+unique_name_in_owner = true
+visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -20.0
+offset_left = -107.0
 offset_right = 20.0
 offset_bottom = 40.0
 grow_horizontal = 2
 
 [node name="Money" type="Label" parent="Top"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.5
+offset_top = -17.5
+offset_right = 60.5
+offset_bottom = 17.5
+grow_horizontal = 2
+grow_vertical = 2
 theme = ExtResource("3_j5yw3")
+theme_override_font_sizes/font_size = 25
 text = "0$"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="LeftMenu/LeftMenuContainer/Pc" to="." method="PC"]
 [connection signal="pressed" from="LeftMenu/LeftMenuContainer/Settings" to="." method="Settings"]
