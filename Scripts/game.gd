@@ -6,9 +6,11 @@ func _ready() -> void:
 		var button = TextureButton.new()
 		%BattleBox.add_child(button)
 		button.texture_normal = tex
-	for num in range(1,6):
+		button.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	for num in range(1,7):
 		var i : ImageTexture = await Setup.SetupParty(num)
 		var button = TextureButton.new()
+		button.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
 		button.texture_normal = i
 		%PartyList.add_child(button)
 	$Top/Money.text = "Money $" + str(int(Globals.data.money))

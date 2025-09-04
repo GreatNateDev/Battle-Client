@@ -47,7 +47,6 @@ text = "Connecting to Server..."
 
 [node name="Party" type="Control" parent="."]
 unique_name_in_owner = true
-visible = false
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -62,19 +61,12 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -392.0
-offset_bottom = 260.0
+offset_left = -496.0
+offset_right = -167.0
+offset_bottom = 134.0
 grow_horizontal = 0
+scale = Vector2(1.5, 1.5)
 columns = 3
-
-[node name="Party-text" type="Label" parent="Party"]
-layout_mode = 0
-offset_left = -200.0
-offset_top = 264.0
-offset_right = -123.0
-offset_bottom = 306.0
-theme_override_font_sizes/font_size = 30
-text = "Party"
 
 [node name="LeftMenu" type="Control" parent="."]
 unique_name_in_owner = true
@@ -124,6 +116,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
+scale = Vector2(2, 2)
 horizontal_scroll_mode = 2
 metadata/_edit_use_anchors_ = true
 
