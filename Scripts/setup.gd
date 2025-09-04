@@ -52,6 +52,7 @@ func SetupParty(num):
 			if errchk == OK:
 				return ImageTexture.create_from_image(img)
 func set_new_user_values():
+	# most of this will be server sided soon
 	Globals.data["money"] = 0
 	Globals.data["mon1"] = {"name": "pikachu"}
 	Globals.data["mon2"] = {"name": "pokeball"}
