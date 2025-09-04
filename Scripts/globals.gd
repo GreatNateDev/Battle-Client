@@ -23,14 +23,13 @@ func send_cookie():
 func loadsave():
 	if data != {}:
 		save()
-	Setup.init()
+	await Setup.init()
 	var req = HTTPRequest.new()
 	add_child(req)
 	req.request(Globals.SERVER+"savedata?name="+Globals.USERNAME+"&type=download&cookie="+Globals.COOKIE+"&data=req")
-	req.request_completed.connect(load_req)
-func load_req(_r, c, _h, b):
-	if c == 200:
-		var text = b.get_string_from_utf8()
+	var res = await req.request_completed
+	if res[1] == 200:
+		var text = res[3].get_string_from_utf8()
 		var json = JSON.parse_string(text)
 		if typeof(json) == TYPE_DICTIONARY:
 			data = json
