@@ -2,10 +2,15 @@ extends Control
 func _ready() -> void:
 	await Globals.loadsave()
 	for num in Globals.BATTLES:
-		var tex = await Setup.GetSprites(num)
+		var tex : ImageTexture = await Setup.GetSprites(num)
 		var button = TextureButton.new()
 		%BattleBox.add_child(button)
 		button.texture_normal = tex
+	for num in range(1,6):
+		var i : ImageTexture = await Setup.SetupParty(num)
+		var button = TextureButton.new()
+		button.texture_normal = i
+		%PartyList.add_child(button)
 	$Top/Money.text = "Money $" + str(int(Globals.data.money))
 	%Party.visible = true
 	%Selecter.visible = true

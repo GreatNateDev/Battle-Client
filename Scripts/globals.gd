@@ -4,26 +4,26 @@ extends Node
 @export var PASSWORD : String #Logged in password
 @export var COOKIE : String #10 Degit auth cookie
 @export var BATTLES : Dictionary#Mega dict of all in-game battles
+@export var LOADED : bool#Flag to check if you loaded data from the server
 @export var data : Dictionary #All save data for game
-var dat = HTTPRequest.new()
+var CookieReAuth = HTTPRequest.new()#Needs to be in global scope
 func _ready():
-	add_child(dat)
-	var timer = Timer.new()
-	timer.wait_time = 2
-	timer.one_shot = false 
-	timer.autostart = true
-	timer.timeout.connect(send_cookie)
-	add_child(timer)
+	add_child(CookieReAuth)
+	var ping = Timer.new()
+	ping.wait_time = 2
+	ping.one_shot = false 
+	ping.autostart = true
+	ping.timeout.connect(send_cookie)
+	add_child(ping)
 
 func send_cookie():
 	if COOKIE.length() != 10:
 		return
 	print("Sending Cookie To Server: " + COOKIE)
-	dat.request(SERVER + "submitcookie?cookie=" + COOKIE)
+	CookieReAuth.request(SERVER + "submitcookie?cookie=" + COOKIE)
 func loadsave():
-	if data != {}:
-		save()
 	await Setup.init()
+	await save()
 	var req = HTTPRequest.new()
 	add_child(req)
 	req.request(Globals.SERVER+"savedata?name="+Globals.USERNAME+"&type=download&cookie="+Globals.COOKIE+"&data=req")
@@ -34,13 +34,9 @@ func loadsave():
 		if typeof(json) == TYPE_DICTIONARY:
 			data = json
 func save():
+	#TODO: condense
 	var req = HTTPRequest.new()
 	add_child(req)
 	req.request(Globals.SERVER+"savedata?name="+Globals.USERNAME+"&type=store&cookie="+Globals.COOKIE+"&data="+JSON.stringify(data))
-	req.request_completed.connect(save_req)
-func save_req(_r, c, _h, _b):
-	if c == 200:
-		print("saved")
-	else:
-		print("failed :(")
-	
+	await req.request_completed
+	req.queue_free()

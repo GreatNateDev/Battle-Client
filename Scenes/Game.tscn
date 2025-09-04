@@ -56,7 +56,8 @@ offset_left = -40.0
 offset_bottom = 40.0
 grow_horizontal = 0
 
-[node name="Party-List" type="GridContainer" parent="Party"]
+[node name="PartyList" type="GridContainer" parent="Party"]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -65,30 +66,6 @@ offset_left = -392.0
 offset_bottom = 260.0
 grow_horizontal = 0
 columns = 3
-
-[node name="Party-1" type="TextureButton" parent="Party/Party-List"]
-layout_mode = 2
-texture_normal = ExtResource("2_j5yw3")
-
-[node name="Party-2" type="TextureButton" parent="Party/Party-List"]
-layout_mode = 2
-texture_normal = ExtResource("2_j5yw3")
-
-[node name="Party-3" type="TextureButton" parent="Party/Party-List"]
-layout_mode = 2
-texture_normal = ExtResource("2_j5yw3")
-
-[node name="Party-4" type="TextureButton" parent="Party/Party-List"]
-layout_mode = 2
-texture_normal = ExtResource("2_j5yw3")
-
-[node name="Party-5" type="TextureButton" parent="Party/Party-List"]
-layout_mode = 2
-texture_normal = ExtResource("2_j5yw3")
-
-[node name="Party-6" type="TextureButton" parent="Party/Party-List"]
-layout_mode = 2
-texture_normal = ExtResource("2_j5yw3")
 
 [node name="Party-text" type="Label" parent="Party"]
 layout_mode = 0
