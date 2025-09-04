@@ -1,6 +1,6 @@
 extends Control
 func _ready() -> void:
-	await Globals.loadsave()
+	await Setup.init()
 	for num in Globals.BATTLES:
 		var tex : ImageTexture = await Setup.GetSprites(num)
 		var button = TextureButton.new()

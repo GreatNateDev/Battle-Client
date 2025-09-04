@@ -19,6 +19,7 @@ config/icon="res://Images/icon.svg"
 
 Globals="*res://Scripts/globals.gd"
 Setup="*res://Scripts/setup.gd"
+Connection="*res://Scripts/connection.gd"
 
 [display]
 

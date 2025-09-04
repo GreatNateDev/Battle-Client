@@ -15,28 +15,7 @@ func _ready():
 	ping.autostart = true
 	ping.timeout.connect(send_cookie)
 	add_child(ping)
-
 func send_cookie():
 	if COOKIE.length() != 10:
 		return
-	print("Sending Cookie To Server: " + COOKIE)
 	CookieReAuth.request(SERVER + "submitcookie?cookie=" + COOKIE)
-func loadsave():
-	await Setup.init()
-	await save()
-	var req = HTTPRequest.new()
-	add_child(req)
-	req.request(Globals.SERVER+"savedata?name="+Globals.USERNAME+"&type=download&cookie="+Globals.COOKIE+"&data=req")
-	var res = await req.request_completed
-	if res[1] == 200:
-		var text = res[3].get_string_from_utf8()
-		var json = JSON.parse_string(text)
-		if typeof(json) == TYPE_DICTIONARY:
-			data = json
-func save():
-	#TODO: condense
-	var req = HTTPRequest.new()
-	add_child(req)
-	req.request(Globals.SERVER+"savedata?name="+Globals.USERNAME+"&type=store&cookie="+Globals.COOKIE+"&data="+JSON.stringify(data))
-	await req.request_completed
-	req.queue_free()
