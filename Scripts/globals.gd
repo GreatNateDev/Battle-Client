@@ -1,9 +1,10 @@
 extends Node
-@export var SERVER : String
-@export var USERNAME : String
-@export var PASSWORD : String
-@export var COOKIE : String
-@export var data : Dictionary
+@export var SERVER : String #Server IP in form of http://ip.tld:port/
+@export var USERNAME : String #Logged in username
+@export var PASSWORD : String #Logged in password
+@export var COOKIE : String #10 Degit auth cookie
+@export var BATTLES : Dictionary#Mega dict of all in-game battles
+@export var data : Dictionary #All save data for game
 var dat = HTTPRequest.new()
 func _ready():
 	add_child(dat)

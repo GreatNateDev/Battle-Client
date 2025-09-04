@@ -3,6 +3,11 @@ var load_needed = true
 
 func _ready() -> void:
 	Globals.loadsave()
+	for num in Globals.BATTLES:
+		var download = Globals.BATTLES[num]["mon1"]["name"]
+		var req = HTTPRequest.new()
+		add_child(req)
+		req.request(Globals.SERVER)
 	var t = Timer.new()
 	add_child(t)
 	t.wait_time = 1
@@ -53,4 +58,7 @@ func gui_refresh():
 		%LeftMenu.visible = true
 		%Loading.visible = false
 		load_needed = false
+		
 	$Top/Money.text = "Money $" + str(int(Globals.data.money))
+	for num in Globals.BATTLES:
+		print(num)
